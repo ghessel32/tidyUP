@@ -8,6 +8,7 @@ import { AppState, RoomAnalysis, UploadedImage } from './types';
 import { ArrowRight, RefreshCw, AlertCircle } from 'lucide-react';
 
 const App: React.FC = () => {
+ 
   const [appState, setAppState] = useState<AppState>(AppState.IDLE);
   const [currentImage, setCurrentImage] = useState<UploadedImage | null>(null);
   const [analysisResult, setAnalysisResult] = useState<RoomAnalysis | null>(null);

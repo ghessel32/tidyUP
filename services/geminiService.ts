@@ -1,8 +1,12 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { RoomAnalysis } from "../types";
+const apiKey = __GEMINI_KEY__;
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY
- });
+if (!apiKey) throw new Error("Missing Gemini API key");
+
+const ai = new GoogleGenAI({
+  apiKey
+});
 
 const analysisSchema = {
   type: Type.OBJECT,
